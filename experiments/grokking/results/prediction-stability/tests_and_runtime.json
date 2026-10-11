@@ -1,0 +1,21 @@
+{
+  "test_command": "OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 timeout --signal=TERM --kill-after=30s 300s .venv/bin/python -m unittest discover -s tests -p test_prediction_stability.py -v",
+  "test_result": {
+    "chunk_id": "3eb222",
+    "wall_time_seconds": 0.032977233,
+    "exit_code": 0,
+    "original_token_count": 304,
+    "output": "test_commit_is_required_and_mutation_detected_before_labels_or_future_load (test_prediction_stability.PredictionStabilityChecks) ... ok\ntest_confidence_unique_groups_ties_and_insufficient_result (test_prediction_stability.PredictionStabilityChecks) ... ok\ntest_full239_gap_invalid_top1_and_ensemble_without_any_matching_vote (test_prediction_stability.PredictionStabilityChecks) ... ok\ntest_future_history_peer_or_current_step_rejected (test_prediction_stability.PredictionStabilityChecks) ... ok\ntest_poisoned_true_metadata_never_deserialized_by_input_readers (test_prediction_stability.PredictionStabilityChecks) ... ok\ntest_reversed_clean_pair_is_excluded_before_selection (test_prediction_stability.PredictionStabilityChecks) ... ok\ntest_selector_has_no_label_fields_and_confidence_ignores_other_agreement (test_prediction_stability.PredictionStabilityChecks) ... ok\ntest_stable_wrong_and_future_correctness_partition_independent_toy (test_prediction_stability.PredictionStabilityChecks) ... ok\ntest_temporal_and_replica_priority_differ_from_confidence (test_prediction_stability.PredictionStabilityChecks) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.021s\n\nOK\n"
+  },
+  "run_command": "bash scripts/guard_prediction_stability.sh",
+  "run_result": {
+    "chunk_id": "3f348f",
+    "wall_time_seconds": 5.556669619,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "guard_seconds": 300,
+  "maximum_compute_threads": 2,
+  "disk_guard_bytes": 5368709120
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "selection_sets_verified": 57,
+  "selected_csv_rows_verified": 15808,
+  "checks": [
+    "exact_requested_counts",
+    "pool_only",
+    "no_clean_eval_or_reversal",
+    "one_orientation_per_group",
+    "valid_residue_tokens",
+    "pseudo_accuracy_independent_recount",
+    "transition_partitions",
+    "nested64_256_512",
+    "CSV_manifest_and_results_parity",
+    "committed_manifest_SHA"
+  ],
+  "new_model_forwards": 0,
+  "training_updates": 0
+}

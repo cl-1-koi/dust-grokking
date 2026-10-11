@@ -45,6 +45,56 @@ two compute threads, external300s guard and5GiB disk guard for artifacts.
 Any later self-training continuation requires a separate pre-run amendment,
 an unchanged-data continuation control and a clean evaluation partition.
 
+## Amendment, 2026-10-11 20:22 UTC — bounded pseudo-label continuation
+
+Before looking at the stability diagnostic's correctness results, fix a small
+continuation pilot motivated by the observed i1-n1 regression3177→3200. Use
+its original full model/Adam/perturbation-RNG checkpoint at3177 in every arm.
+This is exploratory checkpoint selection after observing instability, not a
+fresh-seed efficacy result. No backprop, optimizer reset, altered decay or
+learning-rate adjustment is permitted. Use the validated CpuDust path,
+eight CPU threads, original full-batch2823 true training equations.
+
+Three arms: unchanged-data control; append256 current-confidence-selected
+pseudo-labels; append256 replica-agreement/temporal-agreement-selected labels.
+Selections come from the above3177 manifest for i1-n1, frozen before labels
+and3200 predictions are read. Use that model's predicted labels in both
+augmentation arms, not the correct answers or a new ensemble teacher.
+Temporal-only and logit-ensemble selectors remain diagnostic at this stage.
+
+Augmentation is literal dataset augmentation: concatenate the original ordered
+training indices and the256 frozen pseudo indices; normalize once by all
+supervised tokens as the existing updater does. Every original true example
+remains present. Thus the pseudo part has256/(2823+256)=8.31% of mean-loss
+weight; document the consequent dilution of original-data gradients. The
+unchanged-data control retains the original objective. Different batch
+shapes change subsequent perturbation draws; the starting RNG is identical,
+but trajectories do not share identical noise after augmentation. Confidence
+and stability arms have identical example/evaluation budgets. Log all counts.
+All six inputs' terminal teacher-forced answer tokens AND their answer labels
+must use the pseudo-label in augmented examples; EOS targets remain EOS.
+
+Primary evaluation is the pre-existing reserved clean_eval set, excluding both
+orientations of all pseudo-pool groups. Report every10updates including0 and
+the previously observed23-update regression point; horizon200additional
+updates. Report final, minimum across the evaluation trajectory, and the
+mean over evaluations from100through200 (all mandatory, no best-checkpoint
+selection). Also report original true-training fit, pseudo-target fit,
+per-example retention and recovery on clean_eval, answer CE and runtime.
+Ordinary all-held accuracy becomes contaminated after augmentation and is
+secondary, explicitly marked. This pilot cannot prove selection correctness
+or general efficacy from a single unstable teacher.
+
+Run three arms sequentially on worker4 only after its owned pseudo_only
+follow-up exits cleanly. Never interrupt an existing process. Waiting bounded
+to90minutes from queue launch; each arm external3600seconds/internal3540,
+with200-update cap and5GiB disk guard; outer queue16500seconds. Refuse
+nonzero/failed predecessor and pre-existing output directories. All checkpoint
+and selection files are copied into a new immutable input directory before
+launch, with hashes recorded. If an arm stops early, compare only common
+completed updates and report the budget stop separately. No automatic retries
+or horizon extensions.
+
 Question: can forward-only, zeroth-order Dust learn and subsequently grok
 modular addition on the released Power et al. transformer? This is a source
 adaptation experiment, not a reproduction of Dust's language-model benchmark.

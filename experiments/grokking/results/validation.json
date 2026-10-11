@@ -19,5 +19,13 @@
     "exit_code": 0,
     "bp_forward_examples": 0
   },
-  "claim": "One Dust replica satisfies the complete predeclared delayed/persistent grokking gate."
+  "claim": "One Dust replica satisfies the complete predeclared delayed/persistent grokking gate.",
+  "prediction_stability_extension": {
+    "date_utc": "2026-10-11",
+    "packaged_tests_passed": 36,
+    "test_seconds": 7.946,
+    "frozen_selection_sets": 57,
+    "independent_selected_example_rows_verified": 15808,
+    "training_queue": "launched; waiting for existing worker job; no continuation result claimed"
+  }
 }

@@ -46,6 +46,24 @@ vectors or logits gave **100% held-out accuracy**, including the strict unseen
 pairs. No held-out labels chose weights, temperatures or members. This is a
 six-model ensemble, with six-model inference cost.
 
+## Can agreement identify useful pseudo-labels?
+
+An exploratory [frozen prediction audit](STABILITY_RESULTS.md) selected labels
+using only predictions available at update 3177. Across all six replicas,
+each model's top 512 labels ranked by replica agreement, temporal agreement,
+and confidence was correct. These selected sets overlap; this is not 3,072
+independent successes. For the unstable i1-n1 model, top 256 confidence labels
+were 252/256 correct, compared with 256/256 for agreement and 242/256 for temporal
+agreement alone. True labels and update 3200 predictions were opened only after
+selection was frozen. Temporal agreement also preserved wrong answers.
+
+The uniform six-model logit mean answered all 4,669 strictly unseen pairs
+correctly at both 3177 and 3200. This costs six trained models. It does not prove
+that pseudo-label training helps: a separate bounded, matched continuation
+pilot is testing that question. The full historical audit requires original
+cached archives beyond the eleven evaluation checkpoints shipped here;
+[sealed selections and scores](results/prediction-stability) are included.
+
 ## Verify the result in seconds
 
 From this directory, use Python 3.10+ with CPU PyTorch and NumPy. Tested versions
