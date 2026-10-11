@@ -1,0 +1,2 @@
+# Keep sealed CSV exports byte-for-byte, including standard CRLF records.
+results/prediction-stability/*.csv -text whitespace=cr-at-eol
