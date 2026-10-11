@@ -1,3 +1,15 @@
+> **Grokking in only 11 hours 🙂 — CPU-only, zero backprop training.**
+>
+> This experimental fork adapts Dust to modular addition on the released grokking
+> transformer. One fresh model reached **100% on 6,586 held-out equations** using
+> eight CPU threads; six seeds expose substantial variation and instability.
+> Backprop reached comparable accuracy much faster. Upstream authors and other
+> curious researchers are welcome to inspect, reproduce, or improve the result.
+>
+> **[Results, checkpoints, exact caveats, and reproduction instructions →](experiments/grokking/README.md)**
+
+---
+
 # DUST
 
 This is a minimal implementation of our research: <https://qlabs.sh/research/dust>

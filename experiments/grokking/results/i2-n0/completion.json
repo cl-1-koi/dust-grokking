@@ -1,0 +1,8 @@
+{
+  "state": "HORIZON_COMPLETE",
+  "step": 3200,
+  "wall_seconds": 38900.15066123009,
+  "budget_stop_is_failure": false,
+  "signal_received": false,
+  "zeroth_order_only": true
+}

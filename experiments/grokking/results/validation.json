@@ -1,0 +1,23 @@
+{
+  "verified_utc": "2026-10-11T20:20:02.277887+00:00",
+  "checkpoint_verifier": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 timeout 120s python3 -m src.verify_release",
+    "exit_code": 0,
+    "checkpoints": 11,
+    "all_answer_tokens_removed": true,
+    "primary_ensemble_probability_and_logits": "6586/6586 held;4669/4669 strictly unseen"
+  },
+  "correctness_tests": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 timeout 180s python3 -m unittest discover -s tests -v",
+    "passed": 19,
+    "seconds": 4.363
+  },
+  "portable_runner_smoke": {
+    "method": "dust",
+    "updates": 1,
+    "note": "Step0 learning rate is zero by the preserved ten-step warmup; meaningful parameter-update and no-backward checks are in the test suite.",
+    "exit_code": 0,
+    "bp_forward_examples": 0
+  },
+  "claim": "One Dust replica satisfies the complete predeclared delayed/persistent grokking gate."
+}

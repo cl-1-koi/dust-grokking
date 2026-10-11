@@ -1,0 +1,90 @@
+[
+  {
+    "run": "i0-n0",
+    "step": 2000,
+    "file": "checkpoints/i0-n0-step-02000.pt",
+    "sha256": "2d3a8a6e6ff50bae9c26afcbda7485a3f1f27153fff1a81d2cf88a5cbcfb3148",
+    "original_full_checkpoint_sha256": "8c547863d112155bfdcee8e5020e67687710d97d63c1de34e3ff838b469974f8",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i0-n0",
+    "step": 3000,
+    "file": "checkpoints/i0-n0-step-03000.pt",
+    "sha256": "f7fec8c396eb84b6b64932b092fc765a4a7ff9677b48b3d321ef4d9e91b43e53",
+    "original_full_checkpoint_sha256": "5a28b5785ddcfbbdefc8efe430fd59771674a6a4b9edbc5396561792c27b65e8",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i0-n0",
+    "step": 3177,
+    "file": "checkpoints/i0-n0-step-03177.pt",
+    "sha256": "c72b00b9cc4adffeb90ff1a8e2323290fc99a7226c3bd0aa492df88d768e017f",
+    "original_full_checkpoint_sha256": "f6b263e25ecf157e75cce70ed4963b66dccbb2ec7d5396d0bb04b0fce216ef2c",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i0-n0",
+    "step": 3200,
+    "file": "checkpoints/i0-n0-step-03200.pt",
+    "sha256": "59be488ddc59bc2300aea17265f5d5189b99b1ef63d884b718edd1d1c31d0cbd",
+    "original_full_checkpoint_sha256": "686f69ecb8c331657b56270c30c33c7ef597c818e5b4482d353f2781f7e11fec",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i0-n1",
+    "step": 3177,
+    "file": "checkpoints/i0-n1-step-03177.pt",
+    "sha256": "4470d742414430e31093dacc3f3c027d6505ec93a4a7933d29a51e01f53717bc",
+    "original_full_checkpoint_sha256": "0bd944f21865c255854285bb08241914cf5cdab100b2232e889cfd95bbab5d81",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i1-n0",
+    "step": 3177,
+    "file": "checkpoints/i1-n0-step-03177.pt",
+    "sha256": "c6247b482db160c2852e9aa50fc653f649f6660862be4f417d29b1a6e661e684",
+    "original_full_checkpoint_sha256": "64c974a8ccd8e32942784c2f9a838d5fbd8c738cd3ef8b3f42b1a4a5f4822c5f",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i1-n1",
+    "step": 3177,
+    "file": "checkpoints/i1-n1-step-03177.pt",
+    "sha256": "9144850f9faa2ceaab8199d889674c55f186993e549aae2bb42c2ca5856b9094",
+    "original_full_checkpoint_sha256": "e3ebb8962fd8670cce1b0bb8d4969e7ad8b83f623b737be03371b788a06bf0ab",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i1-n1",
+    "step": 3200,
+    "file": "checkpoints/i1-n1-step-03200.pt",
+    "sha256": "21cf30dd41be1d84b3fa3fae930852bcc51e0f5b704074c05b2706b3b82751d5",
+    "original_full_checkpoint_sha256": "53edaa18269761e2074c7c738ee8dc1d1fc24ad3f9a244f48773e1ac0baee29e",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i2-n0",
+    "step": 3177,
+    "file": "checkpoints/i2-n0-step-03177.pt",
+    "sha256": "e999ac9eb3e0c7c37af6b9fe6e5fff4c7c070df5b3ec261e4222fa569361404c",
+    "original_full_checkpoint_sha256": "811b5ce9224d4a31e3cafb51d42619d810ad20752155051e600ec78975db3a19",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i2-n0",
+    "step": 3200,
+    "file": "checkpoints/i2-n0-step-03200.pt",
+    "sha256": "c69493f97cbd79267ffb96d1f06235a483bd47b93f385f8dce3c8e0bda780ea5",
+    "original_full_checkpoint_sha256": "8976977e1f4212bbad1194d683dd3d3a3e2ed4dd5e7bef09e5620b468679edb8",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  },
+  {
+    "run": "i2-n1",
+    "step": 3177,
+    "file": "checkpoints/i2-n1-step-03177.pt",
+    "sha256": "b3066663e2c2d4244e9a7339549c8688ee3044ef1d2ba23eb7de13d0ec051db0",
+    "original_full_checkpoint_sha256": "d7740040217cdf47137e57b77e9fc70a340d3372f177dc967c11b8a4595e617b",
+    "purpose": "Evaluation only; optimizer/RNG omitted; cannot resume original training from this export."
+  }
+]
