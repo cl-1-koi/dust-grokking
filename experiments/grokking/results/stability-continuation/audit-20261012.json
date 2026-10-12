@@ -1,0 +1,94 @@
+{
+  "verified_unix": 1791775367.813456,
+  "passed": true,
+  "all_three_horizon_complete": true,
+  "backprop_steps": 0,
+  "identical_initial_model_adam_rng": true,
+  "baseline_reproduces_original3200_clean_predictions_exactly": true,
+  "rows": [
+    {
+      "arm": "baseline",
+      "evaluations": 22,
+      "final_correct": 2183,
+      "wall_seconds": 1926.1852448110003,
+      "summary": {
+        "final_step": 200,
+        "final_clean_eval_accuracy": 0.9365079365079365,
+        "minimum_clean_eval_accuracy": 0.08065208065208065,
+        "mean_clean_eval_accuracy_updates100_to200": 0.778011778011778,
+        "mean_clean_eval_answer_ce_updates100_to200": 1.0437382378361442,
+        "late_evaluation_steps": [
+          100,
+          110,
+          120,
+          130,
+          140,
+          150,
+          160,
+          170,
+          180,
+          190,
+          200
+        ],
+        "late_window_complete": true,
+        "minimum_scope": "all recorded evaluations including update0; no best-checkpoint selection"
+      }
+    },
+    {
+      "arm": "confidence",
+      "evaluations": 22,
+      "final_correct": 2166,
+      "wall_seconds": 2087.723592434995,
+      "summary": {
+        "final_step": 200,
+        "final_clean_eval_accuracy": 0.9292149292149292,
+        "minimum_clean_eval_accuracy": 0.262977262977263,
+        "mean_clean_eval_accuracy_updates100_to200": 0.8436878436878437,
+        "mean_clean_eval_answer_ce_updates100_to200": 0.6955090977928855,
+        "late_evaluation_steps": [
+          100,
+          110,
+          120,
+          130,
+          140,
+          150,
+          160,
+          170,
+          180,
+          190,
+          200
+        ],
+        "late_window_complete": true,
+        "minimum_scope": "all recorded evaluations including update0; no best-checkpoint selection"
+      }
+    },
+    {
+      "arm": "stability",
+      "evaluations": 22,
+      "final_correct": 2197,
+      "wall_seconds": 2331.599297502995,
+      "summary": {
+        "final_step": 200,
+        "final_clean_eval_accuracy": 0.9425139425139425,
+        "minimum_clean_eval_accuracy": 0.21707421707421706,
+        "mean_clean_eval_accuracy_updates100_to200": 0.8163098163098162,
+        "mean_clean_eval_answer_ce_updates100_to200": 0.77890068563548,
+        "late_evaluation_steps": [
+          100,
+          110,
+          120,
+          130,
+          140,
+          150,
+          160,
+          170,
+          180,
+          190,
+          200
+        ],
+        "late_window_complete": true,
+        "minimum_scope": "all recorded evaluations including update0; no best-checkpoint selection"
+      }
+    }
+  ]
+}

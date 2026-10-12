@@ -1,0 +1,32 @@
+{
+  "state": "HORIZON_COMPLETE",
+  "step": 200,
+  "model_step": 3377,
+  "wall_seconds": 2087.723592434995,
+  "budget_stop_is_failure": false,
+  "signal_received": false,
+  "zeroth_order_only": true,
+  "trajectory_summary": {
+    "final_step": 200,
+    "final_clean_eval_accuracy": 0.9292149292149292,
+    "minimum_clean_eval_accuracy": 0.262977262977263,
+    "mean_clean_eval_accuracy_updates100_to200": 0.8436878436878437,
+    "mean_clean_eval_answer_ce_updates100_to200": 0.6955090977928855,
+    "late_evaluation_steps": [
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170,
+      180,
+      190,
+      200
+    ],
+    "late_window_complete": true,
+    "minimum_scope": "all recorded evaluations including update0; no best-checkpoint selection"
+  },
+  "original_inputs_unchanged": true
+}

@@ -59,8 +59,13 @@ selection was frozen. Temporal agreement also preserved wrong answers.
 
 The uniform six-model logit mean answered all 4,669 strictly unseen pairs
 correctly at both 3177 and 3200. This costs six trained models. It does not prove
-that pseudo-label training helps: a separate bounded, matched continuation
-pilot is testing that question. The full historical audit requires original
+that pseudo-label training helps. A [completed matched continuation pilot](STABILITY_CONTINUATION_RESULTS.md)
+ran 200 more Dust updates from one unstable checkpoint. Final reserved-set
+accuracy was 93.65% without augmentation, 92.92% with confidence-selected
+labels, and 94.25% with agreement-selected labels. Both augmentation arms had
+higher late-window means and higher sampled minima, but still regressed
+severely. One parent/noise state does not establish a reliable treatment effect.
+The full historical audit requires original
 cached archives beyond the eleven evaluation checkpoints shipped here;
 [sealed selections and scores](results/prediction-stability) are included.
 
