@@ -2,6 +2,53 @@
 
 Frozen before implementation and scientific training, 2026-10-10 UTC.
 
+## Amendment, 2026-10-12 03:33 UTC — exact-sub-batch scale-out of older follow-ups
+
+The user requests use of the two idle workers to accelerate the four existing
+follow-up runs. This is an execution migration, not a new training treatment.
+Before code or benchmarking, fix these rules: preserve original Dust (not the
+numerically changed CpuDust path), P16 at every site, original 256-example
+sub-batches including the final short batch, sub-batch order, sparse targets,
+centering, original model and Adam state, and the single saved perturbation RNG.
+No optimizer reset, changed population, new data, or backprop is permitted.
+
+Use two CPU workers per migrated job. Assign complete existing sub-batches
+alternately to ranks, keeping all local attention and head centering inside
+each original sub-batch. Both ranks replay the original noise draw schedule;
+for sub-batches computed elsewhere they generate/discard only those noise
+tensors, preserving the exact sequential generator state without extra model
+forwards. The schedule must be validated against actual calls, including final
+short batches and every direct/head/local site. Exchange each sub-batch's
+parameter estimate in original order, multiply by its original supervised-token
+weight, and accumulate in that order before one Adam step. Do not average
+independently centered estimators or change the per-update random population.
+
+Before migrating a live job, test serial versus distributed estimates, parameter
+updates, Adam moments, final RNG and logical forward counts. Require bitwise
+matching in the tested environment; if this fails, diagnose rather than silently
+changing the scientific trajectory. Run a bounded discarded-update benchmark on
+the two idle workers using an immutable copied checkpoint from a still-running
+older job: same eight CPU threads per rank; at most three serial and three
+parallel full updates; external600s, disk5GiB. Compare measured update wall time
+including communications and RNG replay. No benchmark candidate is retained.
+Proceed only with meaningful measured speedup after communication overhead.
+
+First migration candidates are teacher_mix (worker3 + idle worker2) and
+oracle_mix (worker6 + idle worker4), the two longest projected remaining runs.
+Checkpoint each parent gracefully at an update boundary only after the new
+runner and guards pass validation; archive its final state/metrics unchanged.
+Resume into new directories with explicit lineage and checksums. Preserve the
+original 3200-update horizon and original absolute internal/external deadlines;
+setup/benchmark time never extends these bounds. Use independent per-rank tmux
+runtime guards, finite collective timeouts, clean coordinated stop/checkpoint,
+and 5GiB checkpoint guards. Keep all unrelated jobs/processes untouched.
+
+Report original versus parallel timing, CPU counts, migration steps and any
+numerical deviations. No further scientific sweep is authorized by this change.
+If the new execution is not reliably faster or cannot preserve the estimator,
+leave the current runs unchanged and record the measured limitation.
+
+
 ## Amendment, 2026-10-11 20:15 UTC — prediction stability diagnostic
 
 Before implementing/scoring this diagnostic, fix the prediction-selection

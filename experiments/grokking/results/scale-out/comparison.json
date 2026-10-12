@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "bitwise_model_adam_rng_gradients_losses_logical_counts_all_three_updates": true,
+  "full_final_state_tensors_equal_both_ranks": true,
+  "serial_seconds": [
+    19.6852663650061,
+    20.275860862995614,
+    20.260487371997442
+  ],
+  "parallel_seconds": [
+    13.375776340995799,
+    12.886030948007829,
+    13.130872005000128
+  ],
+  "warm_speedup": 1.558077389465237,
+  "warm_wall_reduction": 0.3581833567694479,
+  "serial_threads": 8,
+  "parallel_workers": 2,
+  "parallel_threads_per_worker": 8,
+  "actual_new_training_updates": 0,
+  "discarded_diagnostic_updates": 6,
+  "backprop_updates": 0,
+  "original_artifact_sha256": "46c98fff9c32b9934e13e955a540404ffd8a3168c80dad900509fae7d4e31c54",
+  "export_note": "Only machine hostname fields omitted; timing/state hashes unchanged."
+}

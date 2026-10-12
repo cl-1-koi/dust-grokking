@@ -27,5 +27,17 @@
     "frozen_selection_sets": 57,
     "independent_selected_example_rows_verified": 15808,
     "training_queue": "launched; waiting for existing worker job; no continuation result claimed"
+  },
+  "scale_out_extension": {
+    "date_utc": "2026-10-12",
+    "full_working_repository_tests_passed": 134,
+    "full_working_repository_test_seconds": 22.415,
+    "focused_engine_and_audit_tests": 6,
+    "focused_continuation_tests": 11,
+    "public_test_discovery": 53,
+    "portable_sources_byte_identical_to_tested_sources": true,
+    "full_real_checkpoint_serial_vs_parallel_updates": 3,
+    "bitwise_parity_all_steps_and_both_ranks": true,
+    "benchmark_speedup": 1.558077389465237
   }
 }

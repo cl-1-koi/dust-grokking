@@ -1,0 +1,143 @@
+{
+  "state": "DISCARDED_AUDIT_COMPLETE",
+  "candidate_retained_for_training": false,
+  "mode": "serial",
+  "rank": 0,
+  "world_size": 1,
+  "threads": 8,
+  "chunk": 256,
+  "population": 16,
+  "settings": {
+    "population": 16,
+    "nrep": 4,
+    "direct_sigma": 0.002,
+    "local_sigma": 0.05,
+    "head_sigma": 0.05,
+    "hub_last_sigma": 0.004,
+    "gamma": 1.0,
+    "causal_direct": true,
+    "terminal_tokenwise": true,
+    "center_correction": true,
+    "head_multiplier": 4
+  },
+  "start_step": 1700,
+  "final_step": 1703,
+  "input_sha256": {
+    "/home/ubuntu/dust-grokking/runs/scale-inputs-20261012/benchmark/latest.pt": "45b5e230ed4ca90769243e87543b79f7a50a521467563087dbe4e897d83cb334",
+    "/home/ubuntu/dust-grokking/runs/scale-inputs-20261012/benchmark/config.json": "eac7b59d35e00656d70709af57dfe8b53357a661170cc60d28f8d92f6b72c488",
+    "/home/ubuntu/dust-grokking/runs/scale-inputs-20261012/benchmark/plan.json": "496408907fbbf871375d30e8c7261f38f8249c7ec7776505f65a6787e460ce6e"
+  },
+  "inputs_unchanged": true,
+  "initial_hashes": {
+    "model": "cecc86445c528d649f6cae9e1fa69a28b1fae6218748a4d040609267d59967dd",
+    "optimizer": "b1ec723f4588b30a12834e890a26a942d82d1c24851ff9fff566d255e7307573",
+    "rng": "82cc90c29efc4a8824b61b5925fef6304183aeb661a094285b0578f05cfdfffc",
+    "counts": "855576e1b7b1bf8c8a918f025cafff86643661f756909aa5bea1a764a4e703f0"
+  },
+  "final_hashes": {
+    "model": "86b3ff52fb303259fbde036336323f0ffee1243941116cf759dfb13915f16c19",
+    "optimizer": "3ad1bf34da9a537f9bbb86ab3126eee063260fa068cc5dc9a54c586c1ccf7c68",
+    "rng": "3b2388002dcc6f7193182951fd3c469f22b0a62c9159bb6b57764992193a869d",
+    "counts": "020d286830d4c76191f8322ddd58c5730b7bbb43d2691831f5cfae2518d2e845"
+  },
+  "rows": [
+    {
+      "step": 1701,
+      "seconds": 19.6852663650061,
+      "loss": 0.5040544080282414,
+      "hashes": {
+        "model": "08e87b3bf94fb0b826f3f7e1ed499ade50a62588a24ad7e37cb547b3f39d896d",
+        "optimizer": "c24847d99243f66ec8da467246b7717180fa94e7700f92c505737939034e69ac",
+        "rng": "ccef6a2aad506b1fe0ef7b1ad64d8ee65276a356ca004b13156b9ec8bac7fcb8",
+        "counts": "603a97325b9a7e5b22ad30ff1538468abfcb83484f58e2686a1062cb9fac47ae",
+        "loss": "46b52316982758fd24320f1c0df1f1aef77c454b977a599691b6a969203f48fe",
+        "gradients": "d629b49e838a3a7e6496e45d8c25bd6314b006ee60c6c49083a8d89cd32593fb"
+      },
+      "dust_counts": {
+        "clean_forwards": 20412,
+        "suffix_forwards": 1061424,
+        "forward_examples": 1003601907,
+        "direct_draws": 3592512,
+        "hub_draws": 653184,
+        "head_draws": 1306368,
+        "local_draws": 1959552,
+        "head_examples": 307323072,
+        "attention_examples": 460984608
+      }
+    },
+    {
+      "step": 1702,
+      "seconds": 20.275860862995614,
+      "loss": 0.48225566673016995,
+      "hashes": {
+        "model": "fb4ee7ff9c20a84c10238b9478a72639d9333dc90e1b930bad2b456e3f1b429b",
+        "optimizer": "358fdaa81b3d17a4aed6e066c7c9e8d1676adc775ff45274d4a3a9b04cc4fd33",
+        "rng": "eb470cf12e8a9cdd3cce5f9dc794dcfb07328b5be20983164b8a2a0047e2ab9d",
+        "counts": "66ddf2524407f7d71a2e5f2600b1a95ae445d2dbc183aa7652c2b9ef1d039d11",
+        "loss": "79a6c4ed5779230f783d81f3bde22d4763392e4c0186df03ee088c476c2824cc",
+        "gradients": "065b522f645d9945064b415f8dfb06eadee43fd1c484b232a270e8e87df2782b"
+      },
+      "dust_counts": {
+        "clean_forwards": 20424,
+        "suffix_forwards": 1062048,
+        "forward_examples": 1004191914,
+        "direct_draws": 3594624,
+        "hub_draws": 653568,
+        "head_draws": 1307136,
+        "local_draws": 1960704,
+        "head_examples": 307503744,
+        "attention_examples": 461255616
+      }
+    },
+    {
+      "step": 1703,
+      "seconds": 20.260487371997442,
+      "loss": 0.4675454709110132,
+      "hashes": {
+        "model": "86b3ff52fb303259fbde036336323f0ffee1243941116cf759dfb13915f16c19",
+        "optimizer": "3ad1bf34da9a537f9bbb86ab3126eee063260fa068cc5dc9a54c586c1ccf7c68",
+        "rng": "3b2388002dcc6f7193182951fd3c469f22b0a62c9159bb6b57764992193a869d",
+        "counts": "020d286830d4c76191f8322ddd58c5730b7bbb43d2691831f5cfae2518d2e845",
+        "loss": "7422d54b8954e22b80725fa4d0514a4bfae1f18eefe1f894629cfd295b96de59",
+        "gradients": "a961adbb427115456003613dfa4742f9f633b841b9b8dd3fd8cd2cb277c6e8cf"
+      },
+      "dust_counts": {
+        "clean_forwards": 20436,
+        "suffix_forwards": 1062672,
+        "forward_examples": 1004781921,
+        "direct_draws": 3596736,
+        "hub_draws": 653952,
+        "head_draws": 1307904,
+        "local_draws": 1961856,
+        "head_examples": 307684416,
+        "attention_examples": 461526624
+      }
+    }
+  ],
+  "physical_rng_replay": {},
+  "total_seconds": 61.435984048002865,
+  "backprop_updates": 0,
+  "source_sha256": {
+    "batch_parallel.py": "27a887e4e60e93d3fbe09d287e73c19c8e3bee7f0b224579481da29058d7b8d3",
+    "batch_parallel_audit.py": "6b45f622b42a11cfcc08e7913a083692f6114a180cb6806b1177f64c6cf970e7",
+    "dust.py": "2d50560354aa2ecd9cb2f47857e0aa74f25dad949137d1e353933209e394e732",
+    "model.py": "f71ef5fd0af1db5b1d024cc6908a0a88ff56ff8d306f6d012c4898a0c6720456",
+    "train.py": "07b04091b646045faae6cdc10199bb7c16677837437ceaf2ac7ec8448cbe104a"
+  },
+  "environment": {
+    "torch": "2.14.1+cpu",
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "timing_note": "Update timings include estimator, communication, RNG replay and Adam; post-update hashes, audit collectives and file writes are excluded.",
+  "original_artifact_sha256": "e122666818ce1ab316cb8adbba601807223ed511e5dd0d501193dabf03eca745",
+  "export_note": "Only machine hostname fields omitted; timing/state hashes unchanged."
+}

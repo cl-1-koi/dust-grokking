@@ -69,6 +69,16 @@ The full historical audit requires original
 cached archives beyond the eleven evaluation checkpoints shipped here;
 [sealed selections and scores](results/prediction-stability) are included.
 
+## Scaling existing CPU runs
+
+An [exact sub-batch implementation](SCALE_OUT_RESULTS.md) spreads an existing
+P16 update across two workers without changing its noise stream or estimator.
+A three-update checkpoint benchmark matched serial model, Adam, gradients,
+losses and RNG bit for bit. Warm update time fell from 20.27s to 13.01s
+(**1.56× speedup**) with two workers using eight threads each. This trades
+more aggregate CPU capacity for shorter wall time. Two older follow-ups now
+use paired workers; their original horizons and deadlines remain in force.
+
 ## Verify the result in seconds
 
 From this directory, use Python 3.10+ with CPU PyTorch and NumPy. Tested versions
